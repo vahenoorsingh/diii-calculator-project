@@ -23,8 +23,6 @@ def clear():
     expression = ""
     equation.set("")
 
-
-
 root = tk.Tk()
 root.title("Scientific Calculator")
 

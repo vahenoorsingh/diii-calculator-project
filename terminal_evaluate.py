@@ -38,9 +38,7 @@ def split_arr(arr):
     return lst
 
 
-def evaluate(arr):
-    lst = split_arr(arr)
-    
+def evaluate(lst):
     tmp = 1
     i = 0
     while(i < len(lst)):
@@ -82,4 +80,5 @@ def evaluate(arr):
     print(lst[0])
     return(str(lst[0]))
 
-evaluate(input("Enter valid expression with +-/* only: "))
+# input("Enter valid expression with +-/* only: ")
+evaluate(split_arr(input("Enter valid expression with +-/* and ()s only: ")))
