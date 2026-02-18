@@ -1,4 +1,4 @@
-
+import math
 
 def split_arr(arr):
     lst = []
@@ -6,6 +6,14 @@ def split_arr(arr):
     a = 0
     while a < len(arr):
         i = arr[a]
+        # if(a.isalpha()):
+        #     if(currentString):
+        #         lst.append(currentString)
+        #         currentString = ""
+        #     while():
+        #         currentString = currentString + arr[a]
+        #         a += 1
+
         if (i.isdigit() or i == "."):
             currentString = currentString + i
         elif i == '(':
@@ -51,6 +59,12 @@ def evaluate(lst):
         i += 1
 
     i = 0
+    if(lst[i] == '+'):
+        del lst[i]
+    elif(lst[i] == '-'):
+        del lst[i]
+        lst[i] = "-" + lst[i]
+    
     while(i < len(lst)):
         a = lst[i]
         if a == '*':
